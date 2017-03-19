@@ -503,10 +503,7 @@ def YANGListType(*args, **kwargs):
 
     def __init__(self, *args, **kwargs):
       self._ordered = True if user_ordered else False
-      if user_ordered:
-        self._members = collections.OrderedDict()
-      else:
-        self._members = dict()
+      self._members = collections.OrderedDict()
       self._keyval = keyname
       if not type(listclass) == type(int):
         raise ValueError("contained class of a YANGList must be a class")
