@@ -535,6 +535,15 @@ def YANGListType(*args, **kwargs):
         return False
       return True
 
+    def keys(self):
+      return self._members.keys()
+
+    def items(self):
+      return self._members.items()
+
+    def values(self):
+      return self._members.values()
+
     def iteritems(self):
       return self._members.iteritems()
 
